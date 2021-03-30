@@ -50,6 +50,19 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: "Poppins";
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
 }
 
 /* ======= CLASS CSS ======== */
@@ -75,16 +88,124 @@ html {
   margin-bottom: var(--mb-1);
 }
 
+/* ======== LAYOUT ========= */
+.bd-container {
+  max-width: 960px;
+  width: calc(100% - 2rem);
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+}
 
+.bd-grid {
+  display: grid;
+  gap: 1.5rem;
+}
 
-@media screen and (min-width: 768px) {
-  :root {
-    --biggest-font-size: 4rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: 0.875rem;
-    --smaller-font-size: 0.813rem;
+.l-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+}
+
+/* =========== NAV ============ */
+.nav {
+  max-width: 1024px;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__list {
+    padding-left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 0 1rem;
+    text-align: center;
+    background-color: var(--body-color);
+    transition: 0.4s;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 1rem 1rem;
+    z-index: var(--z-fixed);
   }
+}
+
+.nav__item {
+  margin-bottom: var(--mb-2);
+  list-style: none;
+}
+
+.nav__link,
+.nav__logo,
+.nav__toggle {
+  color: var(--text-color);
+  font-weight: var(--font-medium);
+}
+
+.nav__logo:hover {
+  color: var(--first-color);
+}
+
+.nav__link {
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: var(--first-color);
+}
+
+.nav__toggle{
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+/* Show menu */
+.show-menu {
+    top: var(--header-height)
+}
+
+/* Active Link */
+.active-link {
+    color: var(--first-color);
+}
+
+/* Change background header */
+.scroll-header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+}
+
+/* Scroll top */
+.scrollTop {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .3rem;
+    background: rgba(6, 156, 84, .5);
+    border-radius: .4rem;
+    z-index: var(--z-tooltip);
+    text-decoration: none;
+    color: #ffffff;
+    transition: .4s;
+    /* visibility: hidden; */
+}
+
+.scrollTop:hover {
+    background-color: var(--first-color-alt);
+}
+
+.scrollTop__icon {
+    font-size: 1.8rem;
+    color: var(--body-color);
 }
