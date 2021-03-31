@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 html,
 body {
   padding: 0;
@@ -13,4 +15,36 @@ a {
 
 * {
   box-sizing: border-box;
+  font-family: "Montserrat";
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #101012;
+}
+
+
+/* ======= LAYOUT CSS ======= */
+.coin__app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  color: #fff;
+}
+.layout {
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.coin__logo {
+  height: 200px;
+  width: 200px;
 }
