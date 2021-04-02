@@ -1,17 +1,28 @@
+import axios from "axios";
 import { useState, useEffect } from "react"
+import Poster from "../Poster/Poster";
+import { RowBody, RowHeading, RowWrapper } from "./row.styles";
 
-const Row = () => {
+const Row = ({ fetchUrl, title }) => {
     const [ posters, setPosters ] = useState([]);
     useEffect(() => {
-        fetch("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=cd0b46709cc75cdb6870f1c20cc4638b&page=1")
-        .then(res => res.json())
-        .then(data => console.log(data))
+        axios.request(`https://api.themoviedb.org/3/${fetchUrl}`)
+        .then((res) => setPosters(res.data));
+    }, [  fetchUrl ])
 
-    }, [])
     return (
-        <div>
-            <h1>Row</h1>
-        </div>
+        <RowWrapper>
+            <RowHeading>{title}</RowHeading>
+
+            <RowBody>
+                { console.log(posters)}
+                <Poster />
+                <Poster />
+                <Poster />
+                <Poster />
+                <Poster />
+            </RowBody>
+        </RowWrapper>
     )
 }
 

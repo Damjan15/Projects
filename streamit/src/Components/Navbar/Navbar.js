@@ -41,11 +41,11 @@ const Navbar = () => {
         </NavbarItem>
 
         <NavbarItem>
-          <NavbarLink>Movies</NavbarLink>
+          <NavbarLink to="/movies">Movies</NavbarLink>
         </NavbarItem>
 
         <NavbarItem>
-          <NavbarLink>Shows</NavbarLink>
+          <NavbarLink to="/shows">Shows</NavbarLink>
         </NavbarItem>
 
         <NavbarItem>
