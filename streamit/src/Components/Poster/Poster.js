@@ -1,18 +1,40 @@
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
+import { selectedPoster } from "../../features/posterSlice";
 import { PosterH3, PosterImage, PosterInfo, PosterOverview, PosterSpan, PosterWrapper } from "./poster.styles";
-import Cover from "../../assets/shortCover.jpg";
 
-const Poster = () => {
+const Poster = ({ id, image, title, rating, overview }) => {
+    const history = useHistory();
+    const dispatch = useDispatch();
+    const IMAGE_URL = "https://image.tmdb.org/t/p/original/";
+
+    
+    // =========== Truncate Text ==============
+    const truncate = ( str, num ) => {
+        if (str.length <= num) {
+            return str;
+        }
+
+        return str.slice(0, num) + "...";
+    }
+
+    /* ============ Redux Select Poster ================ */
+    const openPoster = () => {
+        dispatch(selectedPoster({ id, image, title, rating, overview }));
+        history.push(`/details/${id}`);
+    }
+
     return (
-        <PosterWrapper>
-            <PosterImage src={Cover} />
+        <PosterWrapper onClick={openPoster}>
+            <PosterImage src={`${IMAGE_URL}${image}`} />
 
             <PosterInfo>
-                <PosterH3>Title</PosterH3>
-                <PosterSpan>9.5</PosterSpan>
+                <PosterH3>{truncate(title, 10)}</PosterH3>
+                <PosterSpan>{rating}</PosterSpan>
             </PosterInfo>
             <PosterOverview>
                 <PosterH3>Overview</PosterH3>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui provident quae eligendi doloremque in est ipsam saepe maxime deserunt soluta voluptate quasi, veritatis illum laboriosam dolore impedit hic amet dignissimos.
+                { overview }
             </PosterOverview>
         </PosterWrapper>
     )

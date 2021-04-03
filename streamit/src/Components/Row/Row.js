@@ -13,14 +13,11 @@ const Row = ({ fetchUrl, title }) => {
     return (
         <RowWrapper>
             <RowHeading>{title}</RowHeading>
-
+            { console.log(posters.results)}
             <RowBody>
-                { console.log(posters)}
-                <Poster />
-                <Poster />
-                <Poster />
-                <Poster />
-                <Poster />
+                { posters.results?.map(card => (
+                    <Poster key={card?.id} id={card?.id} image={card?.poster_path} title={card?.name || card?.title || card?.original_title} overview={card?.overview} rating={card?.vote_average} />
+                ))}
             </RowBody>
         </RowWrapper>
     )

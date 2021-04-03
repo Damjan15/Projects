@@ -50,6 +50,10 @@ export const NavbarForm = styled.form`
     padding: 12px;
     border-radius: 30px;
     margin-right: 30px;
+
+    > button {
+        display: none;
+    }
 `;
 
 export const NavbarInput = styled.input`

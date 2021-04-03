@@ -7,9 +7,9 @@ export const Home = () => {
         <>
             <Showcase />
             {/* Row -> Latest Movies */}
-            <Row fetchUrl={requests.fetchMovieAction} />
+            <Row fetchUrl={requests.fetchMovieAction} title="Action" />
             {/* Row -> Latest Shows */}
-            <Row fetchUrl={requests.fetchMovieAdventure} />
+            <Row fetchUrl={requests.fetchMovieAdventure} title="Adventure" />
             {/* Row -> Most Popular Movies */}
             <Row fetchUrl={requests.fetchMovieAction} />
             {/* Row -> Most Popular Shows */}

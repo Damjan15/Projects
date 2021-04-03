@@ -14,6 +14,7 @@ const requests = {
     fetchMovieWar: `discover/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&with_genres=10752`,
     fetchMovieHorror: `discover/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&with_genres=27`, 
     fetchMystery: `discover/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&with_genres=9648`,
+    fetchMoviePopular: `movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`,
 
     /* ========== TV SHOWS ========== */
     fetchPopularTV: `tv/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`,
@@ -26,7 +27,6 @@ const requests = {
     fetchDramaTV: `discover/tv?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&with_genres=18`,
     fetchMysteryTV: `discover/tv?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&with_genres=9648`,
     fetchSciFiTV: `discover/tv?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&with_genres=10765`,
-
 }
 
 export default requests;

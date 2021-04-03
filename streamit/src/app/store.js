@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import posterReducer from "../features/posterSlice";
 
 export default configureStore({
   reducer: {
-    counter: counterReducer,
+    poster: posterReducer,
   },
 });

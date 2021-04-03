@@ -1,9 +1,12 @@
-import { BannerWrapper } from "./banner.styles"
+import { BannerH1, BannerOverlay, BannerWrapper } from "./banner.styles"
 
-export const Banner = () => {
+const Banner = ({ title }) => {
     return (
         <BannerWrapper>
-            <h1>Banner Component</h1>
+            <BannerOverlay>
+                <BannerH1>{title}</BannerH1>
+            </BannerOverlay>
         </BannerWrapper>
     )
 }
+export default Banner;

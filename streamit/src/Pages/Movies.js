@@ -1,13 +1,11 @@
-import { Banner } from "../Components/Banner/Banner"
+import Banner from "../Components/Banner/Banner"
 import Row from "../Components/Row/Row"
 import requests from "../requests"
 
 export const Movies = () => {
     return (
         <>
-            <Banner />
-
-            {/* Render the rows below */}
+            <Banner title="Movies" />
             <Row fetchUrl={requests.fetchMovieAction} title="Action" />
             <Row fetchUrl={requests.fetchMovieAdventure} title="Adventure" />
             <Row fetchUrl={requests.fetchMovieComedy} title="Comedy" />
