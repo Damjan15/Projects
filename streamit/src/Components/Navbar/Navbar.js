@@ -1,3 +1,6 @@
+import { useHistory } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
 import {
   NavbarCenter,
   NavbarForm,
@@ -9,20 +12,16 @@ import {
   NavbarWrapper,
 } from "./navbar.styles.js";
 
-import { useHistory } from "react-router-dom";
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { searchedTerm } from "../../features/posterSlice.js";
 
-const Navbar = () => {
-  const history = useHistory();
-  const dispatch = useDispatch();
+const Navbar = ({ data, setData }) => {
   const [ input, setInput ] = useState("");
+  const history = useHistory();
 
   const search = (e) => {
     e.preventDefault();
-    dispatch(searchedTerm({ input }));
 
+    axios.request(`https://api.themoviedb.org/3/search/multi?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&query=${input}`).then(res => setData(res.data));
+    
     history.push("/search");
     setInput("");
   }
@@ -31,6 +30,7 @@ const Navbar = () => {
   return (
     <NavbarWrapper>
       <NavbarLogo>
+        <NavbarLink to="/">
         <svg
           width="432"
           height="64"
@@ -51,6 +51,7 @@ const Navbar = () => {
             fill="#009BDD"
           />
         </svg>
+        </NavbarLink>
       </NavbarLogo>
 
       <NavbarCenter>
@@ -85,8 +86,6 @@ const Navbar = () => {
           <button onClick={search}></button>
         </NavbarForm>
       </NavbarRight>
-
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12,11.807C9.349,9.155,8.7,5.261,10.049,2c-1.875,0.37-3.666,1.281-5.12,2.735c-3.905,3.905-3.905,10.237,0,14.142	c3.906,3.906,10.237,3.905,14.143,0c1.454-1.454,2.364-3.244,2.735-5.119C18.545,15.106,14.651,14.458,12,11.807z"/></svg>
     </NavbarWrapper>
   );
 };

@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
     selectedPoster: null,
-    searchTerm: null,
+    term: null,
 }
 
 const posterSlice = createSlice({
@@ -13,7 +13,21 @@ const posterSlice = createSlice({
             state.selectedPoster = action.payload;
         },
         searchedTerm: ( state, action ) => {
-            return { ...state, searchTerm: action.searchTerm }
+            // return {
+            //     ...state,
+            //     term: action.payload
+            // }
+            return { 
+                ...state, 
+                term: action.payload, 
+            }
+
+            // state.term = action.payload
+
+            // return {
+            //     ...state.term,
+            //     term: action.term
+            // }
         }
     
     }
@@ -21,5 +35,5 @@ const posterSlice = createSlice({
 
 export const { selectedPoster, searchedTerm } = posterSlice.actions;
 export const selectOpenPoster = state => state.poster.selectedPoster;
-export const selectOpenTerm = state => state.poster.searchTerm;
+export const selectOpenTerm = state => state.poster.term;
 export default posterSlice.reducer;

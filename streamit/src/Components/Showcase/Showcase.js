@@ -19,7 +19,7 @@ const Showcase = () => {
 
             <ShowcaseBody>
                 { showcase.slice(0, 3).map(poster => (
-                    <PosterLarge image={poster?.backdrop_path} title={poster?.title} overview={poster?.overview}  />
+                    <PosterLarge key={poster?.id} id={poster?.id} image={poster?.backdrop_path} title={poster?.title} overview={poster?.overview} rating={poster?.vote_average}  />
                 ))}
             </ShowcaseBody>
         </ShowcaseWrapper>

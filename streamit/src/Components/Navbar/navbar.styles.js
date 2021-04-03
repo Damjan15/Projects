@@ -15,7 +15,7 @@ export const NavbarWrapper = styled.div`
 export const NavbarLogo = styled.div`
     width: 20%;
 
-    > svg {
+    > a > svg {
         width: 100%;
         object-fit: contain;
     }

@@ -1,7 +1,13 @@
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router";
+import { selectedPoster } from "../../features/posterSlice";
 import { PosterLargeWrapper, PosterLargeImage, PosterLargeOverview, PosterLargeTitle } from "./posterlarge.styles";
 
-const PosterLarge = ({ image, title, overview}) => {
+const PosterLarge = ({ id, image, title, overview, rating}) => {
     const IMAGE_URL = "https://image.tmdb.org/t/p/original/";
+    const dispatch = useDispatch();
+    const history = useHistory();
+
 
     // =========== Truncate Text ==============
     const truncate = ( str, num ) => {
@@ -12,8 +18,14 @@ const PosterLarge = ({ image, title, overview}) => {
         return str.slice(0, num) + "...";
     }
 
+    /* ============ Redux Select Poster ================ */
+    const openPoster = () => {
+        dispatch(selectedPoster({ id, image, title, overview, rating }));
+        history.push(`/details/${id}`);
+    }
+
     return (
-        <PosterLargeWrapper>
+        <PosterLargeWrapper onClick={openPoster}>
             <PosterLargeImage src={`${IMAGE_URL}${image}`} />
 
             <PosterLargeOverview>

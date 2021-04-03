@@ -1,7 +1,11 @@
 import {
   NavbarToggleContainer,
+  NavbarToggleItem,
+  NavbarToggleLink,
+  NavbarToggleList,
   NavbarToggleLogo,
   NavbarToggleMenu,
+  NavbarToggleSearch,
   NavbarToggleWrapper,
 } from "./navbartoggle.styles";
 
@@ -42,6 +46,32 @@ const NavbarToggle = () => {
           </svg>
         </NavbarToggleMenu>
       </NavbarToggleContainer>
+
+
+      <NavbarToggleList>
+        <NavbarToggleItem>
+         X
+        </NavbarToggleItem>
+        <NavbarToggleItem>
+          <NavbarToggleLink>Home</NavbarToggleLink>
+        </NavbarToggleItem>
+
+        <NavbarToggleItem>
+          <NavbarToggleLink>Movies</NavbarToggleLink>
+        </NavbarToggleItem>
+
+        <NavbarToggleItem>
+          <NavbarToggleLink>Shows</NavbarToggleLink>
+        </NavbarToggleItem>
+
+        <NavbarToggleItem>
+          <NavbarToggleLink>Most Popular</NavbarToggleLink>
+        </NavbarToggleItem>
+
+        <NavbarToggleItem>
+          <NavbarToggleSearch placeholder="Search" />
+        </NavbarToggleItem>
+      </NavbarToggleList>
     </NavbarToggleWrapper>
   );
 };
