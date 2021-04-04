@@ -43,6 +43,7 @@ export const PosterWrapper = styled.div`
     border-radius: 3px;
     -webkit-box-shadow: 5px 5px 17px -1px rgba(0,0,0,0.4); 
     box-shadow: 5px 5px 17px -1px rgba(0,0,0,0.4);
+    cursor: pointer;
 
     &:hover ${PosterOverview} {
         transform: translateY(0);

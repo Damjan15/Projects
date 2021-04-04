@@ -33,6 +33,7 @@ export const PosterLargeWrapper = styled.div`
     margin-bottom: 20px;
     -webkit-box-shadow: 5px 5px 17px -1px rgba(0,0,0,0.4); 
     box-shadow: 5px 5px 17px -1px rgba(0,0,0,0.4);
+    cursor: pointer;
 
     &:hover ${PosterLargeOverview} {
         opacity: 1;

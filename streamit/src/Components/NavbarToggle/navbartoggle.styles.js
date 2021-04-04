@@ -1,54 +1,81 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const NavbarToggleWrapper = styled.div`
-    display: none;
-
-    @media only screen and ( max-width: 1000px ) {
-        display: block;
-    }
-`;
-
 export const NavbarToggleContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+    position: fixed;
+    background-color: #009bdd;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    top: ${({ isOpen }) => ( isOpen ? "0" : "-100%")};
+    left: 0;
+    opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
+    transition: 0.4s ease-in all;
 `;
 
-export const NavbarToggleLogo = styled.div`
-    width: 150px;
+export const Icon = styled.div`
+    width: 20%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    text-align: right;
 
     > svg {
-        width: 100%;
-        object-fit: contain;
+        font-size: 35px;
     }
 `;
 
-export const NavbarToggleMenu = styled.div``;
-
-export const NavbarToggleList = styled.ul`
-    position: fixed;
-    top: -100%;
-    background-color: #009BDD;
+export const NavbarToggleWrapper = styled.div`
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: 0;
-    padding: 20px;
-`;
+    justify-content: center;
+ `;
 
-export const NavbarToggleItem = styled.li`
-    list-style: none;
-    margin-bottom: 10px;
+export const NavbarToggleMenu = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
 `;
 
 export const NavbarToggleLink = styled(Link)`
+    font-size: 25px;
+    margin-bottom: 20px;
     text-decoration: none;
-    font-size: 18px;
     color: #fff;
-    font-weight: 600;
 `;
 
-export const NavbarToggleSearch = styled.input``;
+export const NavbarToggleForm = styled.form`
+    display: flex;
+    flex-direction: column;
+`;
+
+export const NavbarToggleInput = styled.input`
+    padding: 15px;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+    font-family: inherit;
+
+    &:focus {
+        outline: none;
+    }
+`;
+
+export const NavbarBtn = styled.button`
+    border: none;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    background-color: #fff;
+    color: #009bdd;
+    font-family: inherit;
+
+    &:focus {
+        outline: none;
+    }
+`;

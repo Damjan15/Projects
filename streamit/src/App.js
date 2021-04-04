@@ -12,11 +12,16 @@ import Footer from './Components/Footer/Footer';
 
 function App() {
   const [ data, setData ] = useState([]);
+  const [ isOpen, setIsOpen ] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  }
 
   return (
     <>
-      <Navbar data={data} setData={setData} />
-      <NavbarToggle />
+      <NavbarToggle isOpen={isOpen} toggle={toggle} setData={setData} />
+      <Navbar setData={setData} toggle={toggle} />
       <Switch>
         <Route path="/details/:id" component={Details} />
         <Route path="/popular" component={Popular} />

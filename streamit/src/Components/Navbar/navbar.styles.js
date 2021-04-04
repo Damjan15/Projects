@@ -1,45 +1,71 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const NavbarWrapper = styled.div`
+export const Nav = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 25px;
+    padding: 30px;
+    position: relative;
+
+    @media only screen and ( max-width: 960px ) {
+        transition: 0.8s all ease;
+    }
+`;
+
+export const NavbarContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`;
+
+export const NavbarLogo = styled(Link)`
+    width: 15%;
+
+    > img {
+        width: 100%;
+    }
+
+    @media only screen and ( max-width: 1000px ) {
+        width: 50%;
+    }
+`;
+
+
+export const MobileIcon = styled.div`
+    display: none;
+    width: 20%;
+    position: absolute;
+    right: 0;
+
+    @media only screen and ( max-width: 1000px ) {
+        display: block;
+    }
+`;
+export const NavbarMenu = styled.ul`
+    display: flex;
+    justify-content: center;
+    width: 60%;
 
     @media only screen and ( max-width: 1000px ) {
         display: none;
     }
 `;
 
-export const NavbarLogo = styled.div`
-    width: 20%;
-
-    > a > svg {
-        width: 100%;
-        object-fit: contain;
-    }
-`;
-
-export const NavbarCenter = styled.ul`
-    display: flex;
-    justify-content: center;
-    width: 60%;
-`;
-
 export const NavbarItem = styled.li`
     list-style: none;
-    margin-right: 40px;
+    margin-right: 80px;
 `;
 
 export const NavbarLink = styled(Link)`
     text-decoration: none;
     color: #000;
     font-size: 20px;
-`;
 
-export const NavbarRight = styled.div`
-    width: 20%;
+    &:hover {
+        transition: 0.5s ease-in-out;
+        color: #009bdd;
+    }
 `;
 
 export const NavbarForm = styled.form`
@@ -52,6 +78,10 @@ export const NavbarForm = styled.form`
     margin-right: 30px;
 
     > button {
+        display: none;
+    }
+
+    @media only screen and ( max-width: 1000px ) {
         display: none;
     }
 `;
