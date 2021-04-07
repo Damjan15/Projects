@@ -1,0 +1,25 @@
+.card {
+   width: 30%; 
+   box-shadow: 3px 4px 5px 3px rgba(0,0,0,0.22);
+   -webkit-box-shadow: 3px 4px 5px 3px rgba(0,0,0,0.22);
+   -moz-box-shadow: 3px 4px 5px 3px rgba(0,0,0,0.22);
+   padding: 30px;
+   border-radius: 10px;
+   margin-bottom: 30px;
+}
+.card > a {
+    text-decoration: none;
+    color: var(--secondary-main);
+}
+.card__wrapper {
+    display: grid;
+    place-items: center;
+}
+.card__wrapper > img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.card > a > h2 {
+    margin-top: 20px;
+}

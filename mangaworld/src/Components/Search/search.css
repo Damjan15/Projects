@@ -1,0 +1,37 @@
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.search__heading > h1 {
+    font-weight: var(--semi-bold);
+}
+
+.search__form {
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 6px 5px 2px rgba(0,0,0,0.12);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.search__form >  svg {
+    color: #C2C2C2;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.search__form > input {
+    border: none;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.search__form > input:focus {
+    outline: none;
+}
+.search__form > input::placeholder {
+    color: #C2C2C2;
+}
