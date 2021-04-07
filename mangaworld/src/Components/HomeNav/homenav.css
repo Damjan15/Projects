@@ -1,0 +1,26 @@
+.homeNav {
+    display: flex;
+    align-items: center;
+}
+
+.homeNav__left > svg {
+    font-size: 35px;
+    color: var(--main-color);
+}
+
+.homeNav__right {
+    display: flex;
+    align-items: center;
+}
+
+.homeNav__right > li {
+    list-style: none;
+    margin-right: 50px;
+}
+
+.homeNav__right > li > a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: var(--medium);
+    font-size: 25px;
+}
