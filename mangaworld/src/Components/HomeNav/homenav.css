@@ -16,21 +16,19 @@
     font-size: 25px;
 }
 .homeNav__right {
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
+   margin-left: 50px;
 }
 
-.homeNav__right > li {
-    list-style: none;
-    margin-right: 50px;
-}
-
-.homeNav__right > li > a {
+.homeNav__right >  a {
     text-decoration: none;
     color: var(--secondary-color);
     font-weight: var(--medium);
     font-size: 25px;
+    transition: all 0.3s ease-in-out;
+}
+
+.homeNav__right > a:hover {
+    color: var(--main-color);
 }
 
 @media only screen and ( max-width: 968px ) {

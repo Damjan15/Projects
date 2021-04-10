@@ -4,24 +4,23 @@ import "./sidebar.css";
 const Sidebar = () => {
     return (
         <div className="sidebar">
-            <div className="sidebar__logo">
+            <Link to="/" className="sidebar__logo">
                 <BsBook />
                 <h2>MangaWorld</h2>
-            </div>
+            </Link>
 
             <div className="sidebar__menu">
                 <Link to="/">Home</Link>
-                <Link to="/">Action</Link>
-                <Link to="/">Adventure</Link>
-                <Link to="/">Comedy</Link>
-                <Link to="/">Mystery</Link>
-                <Link to="/">Drama</Link>
-                <Link to="/">Fantasy</Link>
-                <Link to="/">Historical</Link>
-                <Link to="/">Horror</Link>
-                <Link to="/">Martial Arts</Link>
-                <Link to="/">Romance</Link>
-                <Link to="/">School Life</Link>
+                <Link to="/mangas/1">Action</Link>
+                <Link to="/mangas/2">Adventure</Link>
+                <Link to="/mangas/4">Comedy</Link>
+                <Link to="/mangas/7">Mystery</Link>
+                <Link to="/mangas/8">Drama</Link>
+                <Link to="/mangas/10">Fantasy</Link>
+                <Link to="/mangas/13">Historical</Link>
+                <Link to="/mangas/14">Horror</Link>
+                <Link to="/mangas/22">Romance</Link>
+                <Link to="/mangas/23">School Life</Link>
             </div>
         </div>
     )

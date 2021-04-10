@@ -1,13 +1,13 @@
 import "./card.css";
 
-const Card = () => {
+const Card = ({ id, link, image, title }) => {
     return (
         <div className="card">
-            <a href="/">
+            <a href={link} target="_blank" rel="noreferrer">
                 <div className="card__wrapper">
-                    <img src="https://cdn.myanimelist.net/images/manga/1/209370.jpg?s=370b883c4f7f4fe08e661f89fbf0a1a5" alt=""/>
+                    <img src={image} alt=""/>
                 </div>
-                <h2>Manga Title</h2>
+                <h2>{title}</h2>
             </a>
         </div>
     )

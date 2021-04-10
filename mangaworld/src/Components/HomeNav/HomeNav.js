@@ -12,14 +12,9 @@ const HomeNav = () => {
       <div className="mobileIcon">
         <AiOutlineMenu />
       </div>
-      <ul className="homeNav__right">
-        <li>
-          <Link to="/">Explore Books</Link>
-        </li>
-        <li>
-          <Link to="/">About</Link>
-        </li>
-      </ul>
+      <div className="homeNav__right">
+        <Link to="/mangas/1">Explore Mangas</Link>
+      </div>
     </div>
   );
 };

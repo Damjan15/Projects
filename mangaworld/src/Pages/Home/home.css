@@ -21,8 +21,13 @@
     color: var(--secondary-color);
     font-weight: var(--semi-bold);
     border-radius: 8px;
+    transition: all 0.2s ease-in-out;
 }
 
+.hero__btn:hover {
+    background-color: rgb(255, 138, 22);
+    color: #fff;
+}
 .hero__left > h1 {
     font-size: 60px;
     font-weight: var(--semi-bold);
