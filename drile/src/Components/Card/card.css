@@ -1,0 +1,42 @@
+.card {
+    width: 23%;
+}
+
+.card:hover .back-image {
+    opacity: 1;
+}
+
+.card__images {
+    position: relative;
+}
+
+.card__images > img {
+    width: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card__images > .front-image {
+    opacity: 1;
+}
+
+.card__images > .back-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__content > h3 {
+    font-weight: var(--medium);
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}

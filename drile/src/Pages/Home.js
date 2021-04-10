@@ -1,8 +1,12 @@
+import Carousel from "../Components/Carousel/Carousel"
+import Products from "../Components/Products/Products"
 
 export const Home = () => {
     return (
         <div>
-            <h1>Homepage</h1>
+            <Carousel />
+            {/* Products */}
+            <Products />
         </div>
     )
 }

@@ -1,0 +1,30 @@
+.products__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.products__heading > h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.products__menu {
+    display: flex;
+}
+
+.products__menu > li {
+    list-style: none;
+    margin-right: 50px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.products__body {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 50px;
+}
