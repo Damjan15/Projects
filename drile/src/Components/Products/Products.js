@@ -15,9 +15,7 @@ const Products = () => {
                     <li>Bed</li>
                 </ul>
             </div>
-            {/* Products Body */}
             <div className="products__body">
-                {/* Card */}
                 <Card />
                 <Card />
                 <Card />

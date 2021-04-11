@@ -1,5 +1,6 @@
 .card {
     width: 23%;
+    margin-bottom: 20px;
 }
 
 .card:hover .back-image {
@@ -39,4 +40,16 @@
     font-size: 14px;
     margin-bottom: 10px;
     margin-top: 10px;
+}
+
+@media only screen and ( max-width: 580px ) {
+    .card {
+        width: 60%;
+    }
+}
+
+@media only screen and ( min-width: 581px ) and ( max-width: 1023px ) {
+    .card {
+        margin-right: 20px;
+    }
 }

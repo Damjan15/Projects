@@ -13,6 +13,8 @@
 
 .products__menu {
     display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
 .products__menu > li {
@@ -20,6 +22,9 @@
     margin-right: 50px;
     font-size: 16px;
     text-transform: uppercase;
+    font-weight: var(--medium);
+    color: var(--secondary);
+    cursor: pointer;
 }
 
 .products__body {
@@ -27,4 +32,11 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 50px;
+}
+
+@media only screen and ( max-width: 780px ) {
+    .products__body {
+        padding: 0;
+        justify-content: center;
+    }
 }

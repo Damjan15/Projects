@@ -1,0 +1,37 @@
+.categoryBox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #EBEBEB;
+    margin-bottom: 10px;
+    padding: 25px;
+    cursor: pointer;
+    transition: 350ms ease;
+}
+.categoryBox:hover {
+    background-color: var(--main);
+    color: #fff;
+}
+
+.categoryBox.active {
+    background-color: var(--main);
+    color: #fff;
+}
+
+.categoryBox__left > svg {
+    font-size: 42px;
+    margin-right: 10px;
+}
+
+.categoryBox__right > h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: var(--medium);
+    margin-bottom: 5px;
+}
+
+.categoryBox__right > p {
+    color: var(--secondary);
+    font-weight: var(--medium);
+}
+
