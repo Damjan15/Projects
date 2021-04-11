@@ -1,0 +1,86 @@
+.footer {
+    background-color: var(--main);
+    color: #ccc;
+}
+
+.footer__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.footer__left > li {
+    list-style: none;
+    margin-bottom: 10px;
+    font-weight: var(--medium);
+}
+
+.footer__left > li {
+    display: flex;
+    align-items: center;
+}
+
+.footer__left > li > svg {
+    margin-right: 10px;
+}
+
+.footer__left > li > img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.footer__center > li {
+    list-style: none;
+    margin-bottom: 15px;
+    font-weight: var(--medium);
+}
+
+.footer__right {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.footer__right > h3 {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.footer__right > p {
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.footer__form {
+    display: flex;
+    align-items: center;
+}
+
+.footer__form > input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--secondary);
+    width: 450px;
+    padding: 10px;
+    outline: none;
+    color: #ccc;
+}
+
+.footer__form > input::placeholder {
+    color: #ccc;
+}
+
+.footer__bottom {
+    text-align: center;
+    border-top: 1px solid #ccc ;
+    padding: 30px;
+}
+
+@media only screen and ( max-width: 580px ) {
+    .footer__form > input {
+        width: 350px;
+    }
+}

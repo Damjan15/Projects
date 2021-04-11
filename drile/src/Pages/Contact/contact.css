@@ -1,0 +1,99 @@
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+.contact__form {
+    width: 40%;
+}
+
+.contact__form > h3 {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.contact__details {
+    width: 55%;
+}
+
+.contact__heading {
+    display: flex;
+    align-items: center;
+}
+
+.contact__heading > input {
+    width: 100%;
+    padding: 15px;
+}
+
+.contact__heading > input:first-child {
+    margin-right: 10px;
+}
+
+.contact__center > input {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contact__bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__bottom > button {
+    background-color: var(--main);
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    padding: 15px;
+    font-weight: var(--semi);
+    margin-top: 20px;
+}
+
+.contact__details {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #F4F4F4;
+    padding: 60px;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 30px;
+}
+
+.detail > svg {
+    font-size: 35px;
+}
+
+.detail > .title {
+    font-size: 18px;
+    font-weight: var(--semi);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.detail > .secondary__title {
+    color: var(--secondary);
+}
+
+@media only screen and ( max-width: 580px ) {
+    .contact__form {
+        width: 100%;
+    }
+    .contact__details {
+        width: 100%;
+        justify-content: center;
+        padding: 0;
+        margin-top: 50px;
+    }
+}
