@@ -43,14 +43,24 @@
     width: 20%;
     display: flex;
     justify-content: flex-end;
+    text-decoration: none;
+    color: var(--main);
 }
 
 .navbar__dropdown > svg {
     font-size: 30px;
 }
 
-.navbar__dropdownMenu {
-    display: none;
+.navbar__dropdownNumber {
+    background-color: var(--main);
+    border-radius: 20px;
+    height: 18px;
+    width: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
 }
 
 

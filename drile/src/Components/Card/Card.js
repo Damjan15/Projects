@@ -1,22 +1,20 @@
-import FrontImage from "../../assets/chair-front.jpg";
-import BackImage from "../../assets/chair-back.jpg";
 import "./card.css";
 
-const Card = () => {
+const Card = ({ image, cover, title, price }) => {
     return (
         <div className="card">
             <div className="card__thumbnail">
                 <a href="/">
                     <div className="card__images">
-                        <img src={FrontImage} className="front-image" alt=""/>
-                        <img src={BackImage} className="back-image" alt=""/>
+                        <img src={image} className="front-image" alt=""/>
+                        <img src={cover} className="back-image" alt=""/>
                     </div>
                 </a>
             </div>
 
             <div className="card__content">
-                <h3>Vipp Armchair Black Leather</h3>
-                <p>$220.0</p>
+                <h3>{title}</h3>
+                <p>${price}</p>
             </div>
         </div>
     )

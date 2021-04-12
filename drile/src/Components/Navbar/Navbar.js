@@ -38,12 +38,12 @@ const Navbar = () => {
                 </li>
             </ul>
 
-            <div className="navbar__dropdown">
+            <Link to="/cart" className="navbar__dropdown">
                 <AiOutlineShoppingCart />
-                <div className="navbar__dropdownMenu">
-                    <h1>Menu dropdown</h1>
-                </div>
-            </div>
+                <span className="navbar__dropdownNumber">
+                    0
+                </span>
+            </Link>
         </div>
     )
 }
