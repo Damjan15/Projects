@@ -1,25 +1,34 @@
-import DetailsImage from "../../assets/chair.jpg";
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router";
+import { add, selectProduct } from "../../features/productSlice";
 import "./details.css";
 
 export const Details = () => {
+  const product = useSelector(selectProduct);
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const { title, price, image } = product;
+
+  const addToCart = () => {
+    dispatch(add({ title, price, image }));
+    history.push("/cart");
+  }
+
+
   return (
     <div className="details">
       <div className="details__wrapper">
         <div className="details__left">
-            <img src={DetailsImage} alt=""/>
+            <img src={image} alt=""/>
         </div>
         <div className="details__right">
-          <h1 className="title">Simple Coffee Table</h1>
-          <span className="price">$600</span>
+          <h1 className="title">{title}</h1>
+          <span className="price">${price}</span>
           <p className="description">
-            As you run your fingers across the surface of this golden oak
-            colored vanity set, you’ll understand why it stands out from the
-            rest; from the table to the legs, the solid wood material is
-            different from those that cut corners. This is the perfect upscale
-            piece for an exquisite home.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore beatae sit repellat alias tenetur ex et qui illum sed omnis quas optio sapiente earum facere fuga quisquam, excepturi quia aperiam!
           </p>
 
-          <button>Add To Cart</button>
+          <button onClick={addToCart}>Add To Cart</button>
         </div>
       </div>
 
