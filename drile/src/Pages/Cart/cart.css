@@ -1,7 +1,36 @@
 .cartPage {
     border-top: 1px solid #d7d7d7;
+    padding: 30px;
 }
-.cart__header {
+.cart__breadcrumps {
     display: flex;
     align-items: center;
+    padding-bottom: 40px;
+}
+.cart__breadcrumps > a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: var(--medium);
+}
+.cart__breadcrumps > svg {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.cart__itemCount {
+    padding-bottom: 20px;
+}
+.cart__itemCount > h3 {
+    font-weight: 300;
+}
+.cart__itemCount > h3 > .bold {
+    font-weight: var(--medium);
+}
+.cart__body {
+    display: flex;
+}
+
+@media only screen and ( max-width: 580px ) {
+    .cart__body {
+        flex-wrap: wrap;
+    }
 }

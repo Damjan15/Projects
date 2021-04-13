@@ -1,0 +1,45 @@
+.subtotal {
+    width: 30%;
+}
+
+.subtotal__header {
+    border-top: 1px solid #D7D7D7;
+    border-bottom: 1px solid #D7D7D7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.subtotal__body {
+    padding: 20px;
+}
+
+.subtotal__total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #D7D7D7;
+    border-bottom: 1px solid #D7D7D7;
+    padding: 20px;
+}
+
+.subtotal__btn {
+    background: var(--main);
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 550;
+    padding: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+@media only screen and ( max-width: 580px ) {
+    .subtotal {
+        width: 100%;
+        margin-top: 60px;
+    }
+}

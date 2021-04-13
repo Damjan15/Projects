@@ -8,7 +8,7 @@ import Product from "../../Components/Product/Product";
 export const Cart = () => {
     return (
         <div className="cartPage">
-            <div className="cart__header">
+            <div className="cart__breadcrumps">
                 <Link to="/">Home</Link>
                 <BsChevronRight />
                 <Link to="/">Shopping Cart</Link>
