@@ -60,7 +60,6 @@ export const HeroBtn = styled.button`
 
     &:hover {
         background-color: #272727;
-
     }
 `
 
