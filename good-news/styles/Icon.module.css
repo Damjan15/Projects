@@ -1,0 +1,23 @@
+.wrapper {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.wrapper > svg {
+    transition: color .3s ease-in-out;
+}
+
+.wrapper:hover > svg {
+    color: var(--main)
+}
+
+
+@media only screen and ( max-width: 768px ) {
+    .wrapper {
+        display: none;
+    }
+}
