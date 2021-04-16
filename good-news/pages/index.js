@@ -1,5 +1,9 @@
 import Head from 'next/head'
+import BlogPosts from '../components/BlogPosts'
 import Header from '../components/Header'
+import Hero from '../components/Hero'
+import Navbar from '../components/Navbar'
+import Row from '../components/Row'
 
 
 export default function Home() {
@@ -11,7 +15,10 @@ export default function Home() {
       </Head>
 
       <Header />
-      <h1>Let's build the news website</h1>
+      <Navbar />
+      <Hero />
+      <Row />
+      <BlogPosts />
     </div>
   )
 }

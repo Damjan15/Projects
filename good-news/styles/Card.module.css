@@ -1,0 +1,46 @@
+.wrapper {
+    width: 23%;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.imageHolder {
+    width: 100%;
+}
+
+.imageHolder:hover {
+    transition: opacity .3s ease-in-out;
+    opacity: 0.6;
+}
+
+.imageHolder > img {
+    width: 100%;
+}
+
+.content {
+    margin-top: 10px;
+}
+
+.title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.author {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ) {
+    .wrapper {
+        width: 30%;
+    }
+}
+
+@media only screen and ( max-width: 680px ) {
+    .wrapper {
+        width: 100%;
+        margin-right: 0;
+    }
+}
