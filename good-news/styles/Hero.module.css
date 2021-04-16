@@ -1,4 +1,78 @@
 .hero {
     width: 100%;
-    display: flex;
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.hero::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.content {
+    position: absolute;
+    width: 80%;
+    color: #fff;
+    z-index: 2;
+    top: 20%;
+    left: 10%;
+}
+
+.source {
+    background-color: #8c12d7;
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.title {
+    margin-top: 18px;
+    font-size: 45px;
+}
+
+.description {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background: var(--main);
+    display: block;
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+    font-family: inherit;
+    border-radius: 5px;
+}
+
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ) {
+    .content {
+        top: 10%;
+    }
+    .title {
+        font-size: 30px;
+    }
+}
+
+@media only screen and ( max-width: 680px ) {
+    .content {
+        top: 30px;
+    }
+    .title {
+        font-size: 25px;
+    }
+    .description {
+        font-size: 14px;
+    }
 }

@@ -26,7 +26,10 @@ const Header = () => {
 
             <div className={headerStyles.search}>
                 <button className={headerStyles.btn}>Subscribe</button>
-                <Icon Icon={BiSearch} />
+                {/* <Icon Icon={BiSearch} /> */}
+                <a href="/" className={headerStyles.searchBtn}>
+                    <BiSearch />
+                </a>
             </div>
         </div>
     )

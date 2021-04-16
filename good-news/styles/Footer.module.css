@@ -1,0 +1,32 @@
+.wrapper {
+    background-color: #040404;
+    padding: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iconsContainer {
+    display: flex;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.item {
+    list-style: none;
+    margin-right: 15px;
+    color: #fff;
+}
+
+.copyright {
+    padding-top: 10px;
+    color: #777;
+}
