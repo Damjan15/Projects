@@ -1,23 +1,23 @@
-import db from "../../db";
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Card from "../Card/Card"
 import { RowContainer, RowH1, RowWrapper } from "./row.styles"
 
-const Row = () => {
+const Row = ({ title, fetchProducts }) => {
     const [ products, setProducts ] = useState([]);
 
-    console.log(db[0].items);
+    useEffect(() => {
+        setProducts(fetchProducts)
+    }, [ fetchProducts ]);
 
-
+    
     return (
         <RowContainer>
-            <RowH1>Featured Products</RowH1>
+            <RowH1>{title}</RowH1>
 
             <RowWrapper>
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                { products.map(item => (
+                    <Card key={item?.id} id={item?.id} title={item?.title} price={item?.price} />
+                ))}
             </RowWrapper>
         </RowContainer>
     )

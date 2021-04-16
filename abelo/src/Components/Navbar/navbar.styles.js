@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Drawer from '@material-ui/core/Drawer'
 
 export const Nav = styled.div`
     display: flex;
@@ -12,101 +13,181 @@ export const Nav = styled.div`
 `;
 
 export const NavContainer = styled.div`
+    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    /* justify-content: space-between; */
+`;
+
+export const NavImage = styled.div`
+    width: 50%;
+
+    @media only screen and ( min-width: 768px ) {
+        width: 20%;
+    }
+
+    @media only screen and ( min-width: 1024px ) {
+        width: 10%;
+    }
+`;
+
+export const NavLogo = styled.img`
+    width: 100%;
+`;
+
+export const NavMenu = styled.div`
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
 
     > svg {
+        font-size: 25px;
+    }
+
+    @media only screen and ( min-width: 768px ) {
         display: none;
-        font-size: 28px;
-    }
-
-    @media only screen and ( max-width: 680px ) {
-        > svg {
-            display: block;
-        }
+        visibility: hidden;
     }
 `;
 
-export const NavLogo = styled.div`
-    width: 50%;
-
-    > img {
-        width: 100%;
-    }
-`;
-
-export const NavHamburger = styled.div`
-    width: 50%;
-`;
-
-export const NavMenu = styled.ul`
+export const DrawerContainer = styled(Drawer)`
     display: flex;
+    flex-direction: column;
+    
+    > .MuiDrawer-paper {
+        padding: 20px !important;
+    }
 
-    @media only screen and ( max-width: 680px ) {
+    @media only screen and ( min-width: 768px ) {
         display: none;
+        visibility: hidden;
+    }
+`;
+
+export const DrawerHeader = styled.div`
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid #eee;
+
+    > svg {
+        margin-bottom: 15px;
+    }
+`;
+
+export const DrawerMenu = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 30px;
+`;
+
+export const DrawerItem = styled.a`
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: #7e7e7e;
+    font-weight: 450;
+    display: flex;
+    align-items: center;
+
+    > svg {
+        font-size: 25px;
+        margin-left: 10px;
+    }
+`;
+
+export const DrawerFooter = styled.div`
+    > svg { 
+        margin-right: 10px;
+        font-size: 25px;
+        color: #247cea;
+    }
+`;
+
+export const NavList = styled.ul`
+    display: none;
+
+    @media only screen and ( min-width: 768px ) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
     }
 `;
 
 export const NavItem = styled.li`
     list-style: none;
-    margin-right: 35px;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 15px;
+    margin-right: 30px;
+
+    @media only screen and ( min-width: 768px ) {
+        font-size: 20px;
+    }
 `;
 
 export const NavLink = styled.a`
     color: #272727;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        color: #146cda;
+    }
 `;
 
-export const NavTotal = styled.div`
-    display: flex;
-    flex-direction: column;
-`;
+export const NavContent = styled.div``;
 
-export const SpanTotal = styled.span`
-    background-color: #266CFB;
-    text-align: center;
-    display: block;
-    width: 20px;
-    border-radius: 99px;
+export const NavSpan = styled.span`
+    background-color: #146cda;
     padding: 2px;
-    color: #fff;
+    border-radius: 30px;
+    font-size: 14px;
+    display: block;
+    width: 19px;
     font-size: 11px;
+    color: #fff;
+    text-align: center;
 `;
 
-export const Span = styled.span`
-    color: #999;
-    font-size: 13px;
+export const NavTitle = styled.p`
+
+    @media only screen and ( min-width: 768px ) {
+        color: #999;
+        font-size: 13px;
+    }
+
+    @media only screen and ( min-width: 1024px ) {
+        font-size: 18px;
+    }
 `;
 
-export const NavBox = styled.div`
-    padding-right: 10px;
-
+export const NavCartContainer = styled.div`
+    display: none;
+    cursor: pointer;
     > svg {
         font-size: 28px;
+        margin-right: 10px;
         color: #999;
     }
-`;
 
-export const NavCart = styled.div`
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+    @media only screen and ( min-width: 768px ) {
+        display: flex;
+        align-items: center;
+    }
 
-    &:hover ${NavBox} > svg {
-        cursor: pointer;
-        color: #007bff;
+    @media only screen and ( min-width: 1024px ) {
+        > svg {
+            font-size: 32px;
+        }
+    }
+
+    &:hover ${NavTitle} {
+        color: #146cda;
         transition: all .3s ease-in-out;
     }
 
-    &:hover ${Span} {
-        color: #007bff;
+    &:hover > svg {
+        color: #146cda;
         transition: all .3s ease-in-out;
     }
-
-    @media only screen and ( max-width: 680px ) {
-        display: none;
-    }
 `;
-

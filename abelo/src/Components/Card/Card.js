@@ -1,17 +1,17 @@
 import CardCover from "../../assets/AcerNitro.png";
 import { CardWrapper, CardThumbnail, CardImage, CardContent, CardH3, CardP, CardBtn, CardDescription } from "./card.styles"
 
-const Card = () => {
+const Card = ({ id, title, price }) => {
     return (
         <CardWrapper>
             <CardThumbnail>
                 <CardImage src={CardCover} />
             </CardThumbnail>
             <CardContent>
-                <CardH3>Laptop Name</CardH3>
+                <CardH3>{title}</CardH3>
                 <CardDescription>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit nemo exercitationem facere magnam deserunt accusamus temporibus libero maiores, voluptatibus eaque?</CardDescription>
                 
-                <CardP>$21.51</CardP>
+                <CardP>${price}</CardP>
 
                 <CardBtn>View More</CardBtn>
             </CardContent>
