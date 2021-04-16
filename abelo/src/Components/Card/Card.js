@@ -1,7 +1,23 @@
+import { useHistory } from "react-router";
 import CardCover from "../../assets/AcerNitro.png";
+import { useStateValue } from "../../context/stateProvider";
 import { CardWrapper, CardThumbnail, CardImage, CardContent, CardH3, CardP, CardBtn, CardDescription } from "./card.styles"
 
-const Card = ({ id, title, price }) => {
+const Card = ({ id, title, price, image }) => {
+    const [{}, dispatch ] = useStateValue();
+    const history = useHistory();
+
+    const selectCard = () => {
+        dispatch({
+            type: "SELECT_CARD",
+            item: {
+                id,
+                title,
+                price
+            }
+        })
+        history.push("/details");
+    }
     return (
         <CardWrapper>
             <CardThumbnail>
@@ -13,7 +29,7 @@ const Card = ({ id, title, price }) => {
                 
                 <CardP>${price}</CardP>
 
-                <CardBtn>View More</CardBtn>
+                <CardBtn onClick={selectCard}>View More</CardBtn>
             </CardContent>
         </CardWrapper>
     )

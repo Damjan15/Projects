@@ -1,8 +1,11 @@
 import { AiFillStar } from "react-icons/ai";
 import ProductCover from "../../assets/HPPavilion.png";
+import { useStateValue } from "../../context/stateProvider";
 import { BodyLeft, BodyRight, BodyWrapper,  ProductBtn, ProductDescription, ProductImage,  ProductPrice, ProductRatings, ProductTitle } from "./detailsbody.styles"
 
 const DetailsBody = () => {
+    const [{ selected }] = useStateValue();
+    console.log(selected);
     return (
         <BodyWrapper>
             <BodyLeft>

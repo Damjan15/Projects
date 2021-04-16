@@ -37,6 +37,14 @@ export const CategoriesMenu = styled.ul`
 export const CategoriesItems = styled.li`
     font-size: 18px;
     margin-bottom: 10px;
+    color: #585858;
+    transition: color .3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        color: #266cfb;
+        font-weight: 600;
+    }
 
     @media only screen and ( min-width: 768px ) {
         margin-right: 45px;

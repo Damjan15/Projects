@@ -4,8 +4,8 @@ const Hero = () => {
     return (
         <Wrapper>
             <HeroLeft>
-                <HeroH1>Bobvr Z4 Virtual Reality 3D Glasses</HeroH1>
-                <HeroP>Virtual Reality Through A New Lens</HeroP>
+                <HeroH1>HP Pavilion</HeroH1>
+                <HeroP>The most beautiful gaming exeperience</HeroP>
                 <HeroBtn>Shop Now</HeroBtn>
             </HeroLeft>
 

@@ -11,7 +11,7 @@ function reducer(state, action) {
         case "SELECT_CARD":
             return {
                 ...state,
-                selected: action.selected
+                selected: action.item
             }
 
         case "ADD_TO_CART":

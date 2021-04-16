@@ -9,6 +9,7 @@ export const CardWrapper = styled.div`
     -moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.35);
     border-radius: 6px;
     margin-bottom: 40px;
+    
 
 
     @media only screen and ( min-width: 768px ) {
@@ -59,13 +60,17 @@ export const CardP = styled.p`
 `;
 
 export const CardBtn = styled.button`
-    background-color: #266cfb;
-    /* display: block;
-    width: 150px; */
+    background: #266cfb;
     border: none;
     padding: 10px 30px;
     font-family: inherit;
     text-transform: uppercase;
     color: #fff;
     border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #272727;
+    }
 `;

@@ -16,7 +16,7 @@ const Row = ({ title, fetchProducts }) => {
 
             <RowWrapper>
                 { products.map(item => (
-                    <Card key={item?.id} id={item?.id} title={item?.title} price={item?.price} />
+                    <Card key={item?.id} id={item?.id} title={item?.title} price={item?.price} image={item?.image} />
                 ))}
             </RowWrapper>
         </RowContainer>
