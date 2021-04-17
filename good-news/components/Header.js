@@ -1,11 +1,12 @@
 import Icon from "./Icon"
 import { AiOutlineTwitter, AiOutlineInstagram, AiOutlineYoutube } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
-import { BiSearch, BiMenuAltLeft } from "react-icons/bi";
-
+import { BiMenuAltLeft } from "react-icons/bi";
 import headerStyles from "../styles/Header.module.css";
 
+
 const Header = () => {
+
     return (
         <div className={headerStyles.wrapper}>
             <div className={headerStyles.iconsContainer}>
@@ -17,7 +18,6 @@ const Header = () => {
 
             <div className={headerStyles.menu}>
                 <BiMenuAltLeft />
-                {/* Drawer Here */}
             </div>
 
             <div className={headerStyles.logo}>
@@ -26,10 +26,6 @@ const Header = () => {
 
             <div className={headerStyles.search}>
                 <button className={headerStyles.btn}>Subscribe</button>
-                {/* <Icon Icon={BiSearch} /> */}
-                <a href="/" className={headerStyles.searchBtn}>
-                    <BiSearch />
-                </a>
             </div>
         </div>
     )

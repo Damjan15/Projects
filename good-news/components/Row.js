@@ -1,21 +1,17 @@
 import Card from "./Card"
-import Heading from "./Heading"
 import rowStyles from "../styles/Row.module.css";
 
-const Row = () => {
+const Row = ({ data }) => {
     return (
         <div className={rowStyles.wrapper}>
-            <Heading />
-
+            <h1 className={rowStyles.title}>Latest</h1>
             <div className={rowStyles.body}>
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                { data?.articles?.map(article => (
+                    <Card key={article?.id} link={article?.url} title={article?.title} image={article?.urlToImage} author={article?.author} />
+                ))}
             </div>
         </div>
     )
 }
 
-export default Row
+export default Row;
