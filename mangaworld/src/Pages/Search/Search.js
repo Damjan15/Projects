@@ -1,4 +1,5 @@
 import Card from "../../Components/Card/Card";
+import Navbar from "../../Components/Navbar/Navbar";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import "../../index.css";
 import { Layout } from "../../layout/Layout";
@@ -7,6 +8,7 @@ const Search = ({ data }) => {
   return (
     <>
       <Sidebar />
+      <Navbar />
 
       <Layout>
         <div className="row">

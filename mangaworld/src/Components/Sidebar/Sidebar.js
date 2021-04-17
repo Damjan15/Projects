@@ -1,6 +1,7 @@
 import { BsBook } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import "./sidebar.css";
+
 const Sidebar = () => {
     return (
         <div className="sidebar">

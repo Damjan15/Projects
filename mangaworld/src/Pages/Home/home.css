@@ -7,6 +7,20 @@
     flex-wrap: wrap;
 }
 
+.hero__header {
+    display: flex;
+    align-items: center;
+}
+
+.hero__header > svg {
+    font-size: 45px;
+    color: var(--main-color);
+}
+.hero__header > h3 {
+    font-size: 35px;
+    margin-left: 20px;
+    color: var(--main-color);
+}
 .hero__left {
     width: 50%;
 }
@@ -68,6 +82,12 @@
 @media only screen and ( max-width: 500px ) {
     .home {
         padding: 10px;
+    }
+    .hero__header > svg {
+        font-size: 25px;
+    }
+    .hero__header > h3 {
+        font-size: 25px;
     }
     .hero__left {
         margin-bottom: 30px;

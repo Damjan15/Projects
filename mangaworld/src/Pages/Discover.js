@@ -4,6 +4,7 @@ import { Layout } from "../layout/Layout";
 import axios from "axios";
 import Card from "../Components/Card/Card";
 import Search from "../Components/Search/Search";
+import Navbar from "../Components/Navbar/Navbar";
 import "../index.css";
 
 export const Discover = ({ setData }) => {
@@ -26,6 +27,7 @@ export const Discover = ({ setData }) => {
 
   return (
     <>
+      <Navbar setData={setData} />
       <Layout>
         <Search setData={setData} />
         <div className="row">
